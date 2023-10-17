@@ -1,0 +1,34 @@
+{
+    "files.associations": {
+        "iostream": "cpp",
+        "bitset": "cpp",
+        "array": "cpp",
+        "deque": "cpp",
+        "forward_list": "cpp",
+        "list": "cpp",
+        "string": "cpp",
+        "unordered_map": "cpp",
+        "unordered_set": "cpp",
+        "vector": "cpp",
+        "string_view": "cpp",
+        "initializer_list": "cpp",
+        "ranges": "cpp",
+        "span": "cpp",
+        "regex": "cpp",
+        "valarray": "cpp",
+        "ostream": "cpp",
+        "random": "cpp",
+        "functional": "cpp",
+        "xstring": "cpp",
+        "xutility": "cpp",
+        "algorithm": "cpp",
+        "limits": "cpp",
+        "utility": "cpp",
+        "set": "cpp",
+        "map": "cpp"
+    },
+    "cSpell.words": [
+        "Bhupinder"
+    ],
+    "C_Cpp.errorSquiggles": "disabled"
+}

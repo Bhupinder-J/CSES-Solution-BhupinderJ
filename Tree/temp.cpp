@@ -1,11 +1,6 @@
-// ~BhupinderJ
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
 using namespace std;
-
-#define int long long
-#define vi vector<int>
-#define pii pair<int, int>
-#define vvi vector<vector<int>>
 
 class SegmentTree {
 private:
@@ -48,47 +43,6 @@ private:
         return leftSum + rightSum;
     }
 };
-
-const int nn = 2e5;
-int ti = 0;
-vi val(nn), eTour, cnt(nn, 0), idx(nn);
-vi edge[nn];
-
-void dfs(int cv, int pv){
-    eTour.push_back(val[cv]);
-    idx[cv] = ti++;
-    for(int v : edge[cv]){
-        if(v == pv) continue;
-        dfs(v, cv);
-        cnt[cv] += 1 + cnt[v];
-    }
-}
-signed main(){
-    ios_base::sync_with_stdio(0);
-    cin.tie(0);
-    cout.tie(0);
-    
-    int n, q; cin >> n >> q;
-    for(int i=0 ; i<n ; i++)
-        cin >> val[i];
-    for(int i=1 ; i<n ; i++){
-        int x, y; cin >> x >> y;
-        --x, --y;
-        edge[x].push_back(y);
-        edge[y].push_back(x);
-    }
-    dfs(0, -1);
-    SegmentTree st(eTour);
-    while(q--){
-        int tt, s, x; cin >> tt;
-        if(tt == 1){
-            cin >> s >> x;
-            s -= 1;
-            st.update(idx[s], x);
-        }else{
-            cin >> s;
-            s -= 1;
-            cout << st.querySum(idx[s], idx[s] + cnt[s]) << endl;
-        }
-    }
-}
+// SegmentTree segmentTree(arr);
+// segmentTree.update(index, newValue);
+// segmentTree.querySum(left, right);

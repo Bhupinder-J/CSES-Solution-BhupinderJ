@@ -1,0 +1,4 @@
+LCA Queries          : Binary Lifting
+SubTree Queries      : EULER TOUR
+Path to root Queries : EULER TOUR
+Path a - b Queries   : Hwavy Light Decomposition    /* NOT IMPLEMENTED */
